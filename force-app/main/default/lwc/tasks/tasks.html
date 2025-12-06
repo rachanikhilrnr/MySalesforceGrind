@@ -1,0 +1,49 @@
+<template>
+    <lightning-card title="Task Manager" icon-name="custom:custom14">
+        <div class="slds-p-horizontal_small">
+            <lightning-input
+                label="Add Task"
+                value={currentTask}
+                onchange={handleInputChange}
+                placeholder="Enter task name"
+            ></lightning-input>
+            <lightning-button
+                label="Add Task"
+                variant="brand"
+                onclick={addTask}
+                class="slds-m-top_small"
+            ></lightning-button>
+        </div>
+        
+        <template if:true={errorMessage}>
+            <div class="slds-text-color_error slds-m-top_small">{errorMessage}</div>
+        </template>
+        
+        <template if:true={tasksWithClasses.length}>
+            <ul class="slds-list_dotted">
+                <template for:each={tasksWithClasses} for:item="task">
+                    <li key={task.id} class={task.class}>
+                        <lightning-input
+                            type="checkbox"
+                            data-id={task.id}
+                            checked={task.completed}
+                            onchange={handleCheckboxChange}
+                        ></lightning-input>
+                        <span class={task.class}>{task.name}</span>
+                        <lightning-button
+                            label="Delete"
+                            data-id={task.id}
+                            onclick={deleteTask}
+                            class="slds-m-left_small"
+                            variant="destructive"
+                        ></lightning-button>
+                    </li>
+                </template>
+            </ul>
+        </template>
+  
+        <template if:false={tasksWithClasses.length}>
+            <div class="slds-text-align_center slds-m-top_small">No tasks available.</div>
+        </template>
+    </lightning-card>
+  </template>

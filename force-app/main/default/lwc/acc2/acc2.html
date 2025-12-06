@@ -1,0 +1,33 @@
+<template>
+    <lightning-button label="Related" onclick={RelatedFun}></lightning-button>
+    <lightning-button label="Details" onclick={DetailsFun}></lightning-button>
+    <template if:true={toggle}>
+
+        <h1>We found no potential duplicates of this account</h1><br>
+        Contacts (2) <lightning-button label="New"></lightning-button><br>
+        Opportunity (2) <lightning-button label="New"></lightning-button><br>
+        Cases (0) <lightning-button label="New"></lightning-button><br>
+        Notes & Attachment <lightning-button label="Upload"></lightning-button><br>
+        Partners <lightning-button label="New"></lightning-button><br>
+        Cars <lightning-button label="New"></lightning-button>
+
+    </template>
+
+    <template if:false={toggle}>
+        <lightning-input label="Account Owner"></lightning-input>
+        <lightning-input label="Account Name"></lightning-input>
+        <lightning-input label="Parent Account"></lightning-input>
+        <lightning-input label="Account number"></lightning-input>
+        <lightning-input label="Account site"></lightning-input>
+        <lightning-input label="Industry"></lightning-input>
+        <lightning-input label="Annual Revenue "></lightning-input>
+        <lightning-input label="Rating"></lightning-input>
+        <lightning-input label="Phone"></lightning-input>
+        <lightning-input label="Fax"></lightning-input>
+        <lightning-input label="Website"></lightning-input>
+        <lightning-input label="Ticker Symbol"></lightning-input>
+        <lightning-input label="Ownership"></lightning-input>
+        <lightning-input label="Employees"></lightning-input>
+        <lightning-input label="SIC Code"></lightning-input>
+    </template>
+</template>

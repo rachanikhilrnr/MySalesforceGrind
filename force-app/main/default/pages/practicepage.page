@@ -1,0 +1,6 @@
+<apex:page controller="AccountCont">
+    <apex:repeat value="{!accounts}" var="acc">
+        <li>{!acc.name}</li>
+    </apex:repeat>
+    
+</apex:page>

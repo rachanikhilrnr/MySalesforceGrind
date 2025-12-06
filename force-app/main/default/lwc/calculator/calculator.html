@@ -1,0 +1,17 @@
+<template>
+    <h1>Calculator</h1>
+
+    <!-- Buttons -->
+     <lightning-button label="Addition" onclick={sum}></lightning-button>
+     <lightning-button label="Substraction" onclick={sub}></lightning-button>
+     <lightning-button label="Multiplication" onclick={mul}></lightning-button>
+     <lightning-button label="Division" onclick={div}></lightning-button>
+
+    <!-- Inputs -->
+    <lightning-input label="Number1" onchange={addNum1} type="number"></lightning-input>
+    <lightning-input label="Number2" onchange={addNum2} type="number"></lightning-input>
+
+    <!-- Result -->
+     <h1>Result</h1>
+     <h1>{result}</h1>
+</template>

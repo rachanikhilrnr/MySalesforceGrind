@@ -1,0 +1,9 @@
+<template>
+    <template if:true={account.data}>
+        <p>Account Name: {accountName}</p>
+        <p>Account Phone: {accountPhone}</p>
+    </template>
+    <template if:true={account.error}>
+        <p>Error: {account.error.message}</p>
+    </template>
+</template>

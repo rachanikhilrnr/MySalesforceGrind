@@ -1,0 +1,11 @@
+<template>
+    <h1>{n}</h1>
+    <h1>Hello World </h1>
+    <template for:each={obj} for:item="i">
+        <li key={i.id}>{i.name}</li>
+    </template>
+
+    <template iterator:it={obj}>
+        <li key={it.value.id}>{it.value.name}</li>
+    </template>
+</template>

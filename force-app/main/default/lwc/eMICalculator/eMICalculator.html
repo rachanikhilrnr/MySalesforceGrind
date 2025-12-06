@@ -1,0 +1,31 @@
+<template>
+    <h1>EMI Calculator</h1>
+
+    <!-- Inputs -->
+    <lightning-input label="Principal Amount" type="number" onchange={addAmount}></lightning-input>
+    <lightning-input label="Tenure" type="number" onchange={addTenure}></lightning-input>
+    <lightning-input label="Rate of Interest" type="number" onchange={addInterest}></lightning-input>
+
+
+    <lightning-button 
+      label="Submit" 
+      onclick={submit} 
+    ></lightning-button>
+
+    <lightning-button 
+      label="Reset" 
+      onclick={Reset} 
+    ></lightning-button>
+
+    <lightning-button 
+      label="Monthly Details" 
+      onclick={monthlydetails} 
+    ></lightning-button>
+
+
+    <h1>Results</h1>
+    <h1>Interest Payable = {result}</h1>
+    <h1>Total Amount Payable = {totalpayable}</h1>
+    <h1>EMI per month = {emi}</h1>
+
+</template>

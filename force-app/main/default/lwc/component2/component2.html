@@ -1,0 +1,53 @@
+<template>
+    <h1>Calculator</h1>
+    <lightning-input label="Enter Num 1" name="num1" type="number" onchange={addNum1}></lightning-input>
+    <lightning-input label="Enter Num 2" name="num2" type="number" onchange={addNum2}></lightning-input>
+    <h1>The addition is {sumval}</h1>
+    <h1>The subtraction is {subval}</h1>
+    <h1>The multiplication is {mulval}</h1>
+    <h1>The division is {divval}</h1>
+    <lightning-button label="Addition" onclick={sum}></lightning-button>
+    <lightning-button label="Substraction" onclick={sub}></lightning-button>
+    <lightning-button label="Multiplication" onclick={mul}></lightning-button>
+    <lightning-button label="Division" onclick={div}></lightning-button>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!--Buttons-->
+    <lightning-button label="ADD" onclick={sum}></lightning-button>
+    <lightning-button label="SUB" onclick={sub}></lightning-button>
+    <lightning-button label="MUL" onclick={mul}></lightning-button>
+    <lightning-button label="DIV" onclick={div}></lightning-button>
+
+    <!-- Inputs -->
+    <lightning-input type="number" label="Number 1"></lightning-input>
+    <lightning-input type="number" label="Number 2"></lightning-input>
+
+    <br>
+    <br>
+    <!-- Result -->
+    <h1>Result</h1>
+    <h2>{val}</h2>
+
+    <!-- <template lwc:if={bool}>The boolean value is true</template>
+    <template lwc:else>The boolean value is false</template>
+    <br>
+    <lightning-button onclick={toggle} value="Toggle" label="Toggle"></lightning-button>
+
+    <template for:each={values} for:item="value">
+        <li key={value.id}>{value.name}</li>
+    </template>
+
+    <template iterator:it={values}>
+        <li key={it.value.id}>
+            <template if:true={it.first}>{it.value.name}</template>
+            <template if:false={hello}>{it.value.name}</template>
+            <template if:true={it.last}>{it.value.name}</template>
+        </li>
+    </template> -->
+</template>

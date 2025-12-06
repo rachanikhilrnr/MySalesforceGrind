@@ -1,0 +1,11 @@
+<template>
+    <lightning-button label="Activity" onclick={activity}></lightning-button>
+    <lightning-button label="Chatter" onclick={chatter}></lightning-button>
+
+    <template if:true={toggle}>
+        <h1>Activit Details</h1>
+    </template>
+    <template if:false={toggle}>
+        <h1>Chatter Details</h1>
+    </template>
+</template>
